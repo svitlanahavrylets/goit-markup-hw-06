@@ -484,9 +484,9 @@ color: #434455;
 /* ============== /Our team section styles ============== */
 
 /* ============== Portfolio section styles ============== */
-/* .portfolio-section {
+.portfolio-section {
   padding: 96px 0;
-}
+} 
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -503,6 +503,7 @@ color: #434455;
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 48px;
+    margin: 0 auto;
 }
 .project-card-container {
   text-align: left;
@@ -519,7 +520,6 @@ color: #434455;
   margin-bottom: 8px;
 }
 .project-card-item {
-  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card-item:hover,
@@ -554,7 +554,32 @@ color: #434455;
 .project-card-item:hover .portfolio-overlay-text,
 .project-card-item:focus .portfolio-overlay-text {
   transform: translateY(0%);
-} */
+} 
+@media screen and (min-width: 768px) {
+  .project-card {  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+}
+.project-card-item {
+width: calc((100% - 24px) / 2);
+}
+}
+@media screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding: 120px 0;
+  } 
+  .project-card {
+    display: flex;
+    flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+  }
+  .project-card-item {
+    width: calc((100% - 2 * 24px) / 3);
+}
+}
 /* ============== Mobile menu styles ============== */
 .mobile-menu {
     position: fixed;
